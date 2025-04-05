@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contador zika</title>
+    <style>
+        *{
+            box-sizing: border-box;
+           margin: 0%;
+        }
+        body{
+            
+        }
+    </style>
+</head>
+<body>
+    <!--contador-->
+    <section>
+    <h1>contador</h1>
+    <p>0</p>
+    <button onclick="menos()">menos</button>
+    <button onclick="mais()">mais</button>
+    </section>
+    <!--javascript-->
+    <section>
+    <script>
+        let numero = 0
+
+        function menos() {
+            numero--
+            mostrarNaTela()
+        }
+        function mais () {
+            numero++
+            mostrarNaTela()
+        }
+
+        function mostrarNaTela(){
+            const p=document.querySelector('p')
+            p.innerText=numero
+        }
+        mostrarNaTela()
+    </script>
+    </section>
+</body>
+</html>
