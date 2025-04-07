@@ -2,46 +2,63 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contador zika</title>
+    <title>contador</title>
     <style>
         *{
-            box-sizing: border-box;
-           margin: 0%;
+            box-sizer:
+            margin: 0%;
         }
-        body{
+        h1{
+            color: purple
+        }
+        p{
+            color: yellow
+        }
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        button{
+            background-color: purple;
+            color: yellow;        
+            justify-content: center
             
         }
     </style>
 </head>
-<body>
-    <!--contador-->
+<body> 
+
     <section>
+        <img src="capa.png">
     <h1>contador</h1>
-    <p>0</p>
+    <p id="resultado">0</p>
     <button onclick="menos()">menos</button>
     <button onclick="mais()">mais</button>
     </section>
-    <!--javascript-->
-    <section>
     <script>
-        let numero = 0
+        let numero= 0
 
         function menos() {
-            numero--
-            mostrarNaTela()
+        numero--;
+        mostrarResultado();
+       const som= new Audio('camera.mp3');
+       som.play();
         }
-        function mais () {
-            numero++
-            mostrarNaTela()
+        function mais() {
+            numero++;
+            mostrarResultado();
+            const som= new Audio('camera.mp3');
+        som.play();
         }
-
-        function mostrarNaTela(){
-            const p=document.querySelector('p')
-            p.innerText=numero
+        function mostrarResultado() {
+            const p = document.querySelector('#resultado');
+            p.innerText=numero;
         }
-        mostrarNaTela()
     </script>
-    </section>
+    
 </body>
 </html>
