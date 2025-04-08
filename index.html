@@ -7,6 +7,7 @@
         *{
             margin: 0%;
             box-sizing: border-box;
+            padding: 0%;
         }
         h1{
             color: purple;
@@ -51,13 +52,36 @@
         <img src="/imagens/capa.png">
     <h1>contador</h1>
     <p id="resultado">0</p>
+    <button onclick="menos3()">-1000</button>
+    <button onclick="menos2()">-100</button>
+    <button onclick="menos1()">-10</button>
     <button onclick="menos()">-1</button>
     <button onclick="mais()">+1</button>
-    <audio src="sounds/musicadefundo.mp3" autoplay loop></audio>
+    <button onclick="mais1()">+10</button>
+    <button onclick="mais2()">+100</button>
+    <button onclick="mais3()">+1000</button>
     </section>
     <script>
         let numero= 0
-
+        
+        function menos3() {
+        numero-=1000;
+        mostrarResultado();
+       const som= new Audio('sounds/camera.mp3');
+       som.play();
+        }
+        function menos2() {
+        numero-=100;
+        mostrarResultado();
+       const som= new Audio('sounds/camera.mp3');
+       som.play();
+        }
+        function menos1() {
+        numero -= 10;
+        mostrarResultado();
+       const som= new Audio('sounds/camera.mp3');
+       som.play();
+        }
         function menos() {
         numero--;
         mostrarResultado();
@@ -70,11 +94,28 @@
             const som= new Audio('sounds/camera.mp3');
         som.play();
         }
+        function mais1() {
+            numero+= 10;
+            mostrarResultado();
+            const som= new Audio('sounds/camera.mp3');
+        som.play();
+        }
+        function mais2() {
+            numero+= 100;
+            mostrarResultado();
+            const som= new Audio('sounds/camera.mp3');
+        som.play();
+        }
+        function mais3() {
+            numero+= 1000;
+            mostrarResultado();
+            const som= new Audio('sounds/camera.mp3');
+        som.play();
+        }
         function mostrarResultado() {
             const p = document.querySelector('#resultado');
             p.innerText=numero;
         }
-        
     </script>
     
 </body>
