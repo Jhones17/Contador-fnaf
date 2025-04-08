@@ -5,8 +5,8 @@
     <title>contador</title>
     <style>
         *{
-            box-sizer:
             margin: 0%;
+            box-sizing: border-box;
         }
         h1{
             color: purple
@@ -16,17 +16,28 @@
         }
         body {
             background-color: black;
-            display: flex;
+            display: grid;
+            place-items: center;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            min-height: 100vh;
+        }
+        section{
+           border: rgba(114,47,55,255) solid 5px;
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+        }
+        p {
+            font-size: 200px;
+        }
+        h1{ font-size: 100px;
         }
         button{
             background-color: purple;
             color: yellow;        
             justify-content: center
-            
+            height: 
         }
     </style>
 </head>
